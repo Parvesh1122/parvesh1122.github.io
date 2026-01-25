@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta
+      name="description"
+      content="Parvesh Kumar – Web Developer & Designer Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="web developer, portfolio, frontend, backend"
+    />
+    <title>Portfolio</title>
+    !-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="Index.js" />
+  </head>
+  <!-------------------------------------Main------------------------------------------------->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="80"
+    tabindex="0"
+  >
+    <script>
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active");
+        });
+      });
+    </script>
+    <!-------------------------------------Navbar----------------------------------------------->
+    <nav class="navbar navbar-expand-lg pk-navbar fixed-top">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="PK Logo" class="pk-logo-img" />
+        </a>
+        <!-- Mobile toggle -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#pkNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="pkNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <!-- Button -->
+          <a href="#contact" class="btn hire-btn">Hire Me</a>
+        </div>
+      </div>
+      <!-- Glow line -->
+      <div class="glow-line"></div>
+    </nav>
+    <!-------------------------------------Home--------------------------------------------------->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT CONTENT -->
+          <div class="col-md-6 hero-text">
+            <span class="badge-role">⚡ Hello, My name is</span>
+            <h1>
+              <span style="color: #00e5ff">P</span>arvesh
+              <span style="color: #00e5ff">K</span>umar
+            </h1>
+            <p>I create elite, high-performance web applications.</p>
+            <div class="hero-buttons">
+              <a class="btn btn-primary hero-btn">View Projects</a>
+              <a class="btn btn-outline-light resume-btn">Resume ⬇</a>
+            </div>
+          </div>
+          <!-- RIGHT LOGO -->
+        </div>
+      </div>
+    </section>
+
+    /*
+    <!-------------------------------------Section Divider------------------------------------------------->
+    */
+    <hr class="section-divider" />
+
+    <!-------------------------------------About-------------------------------------------------->
+    <section class="about-section" id="about">
+      <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="text-center mb-5">
+          <h2 class="about-title">About Me</h2>
+          <p class="about-subtitle">Who I Am</p>
+        </div>
+
+        <!-- CONTENT ROW -->
+        <div class="row align-items-center">
+          <!-- IMAGE COLUMN (4) -->
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <div class="about-img-wrapper">
+              <img src="Image.png" alt="Parvesh Kumar" />
+            </div>
+          </div>
+
+          <!-- TEXT COLUMN (8) -->
+          <div class="col-md-8 about-text">
+            <p>
+              Hi, I’m <b style="color: #00e5ff">Parvesh Kumar</b>, a passionate
+              learner in web designing and web development. I enjoy creating
+              clean, responsive websites and experimenting with modern UI
+              designs.
+            </p>
+
+            <p>
+              I’m currently learning and building projects in frontend, backend,
+              app development, and software testing.
+            </p>
+
+            <p>
+              My main focus is improving my skills by building real projects and
+              learning every day.
+            </p>
+
+            <ul class="about-list">
+              <li>Web Design</li>
+              <li>Web Development</li>
+              <li>App Development</li>
+              <li>Software Testing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    /*
+    <!-------------------------------------Section Divider------------------------------------------------->
+    */
+    <hr class="section-divider" />
+    <!-------------------------------------Project------------------------------------------------>
+    <section class="projects-section" id="project">
+      <div class="container">
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Some of My Works</p>
+        </div>
+
+        <!-- PROJECTS GRID -->
+        <div class="row g-4">
+          <!-- PROJECT CARD 1 -->
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="project1.png" alt="Portfolio Project" />
+
+              <h4>Portfolio Website</h4>
+              <p>
+                Personal portfolio website built with modern UI and animations.
+              </p>
+
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+              </div>
+
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+
+          <!-- PROJECT CARD 2 -->
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="project2.png" alt="E-commerce Project" />
+
+              <h4>E-commerce UI</h4>
+              <p>Responsive e-commerce UI with clean layout and cart system.</p>
+
+              <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+              </div>
+
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+
+          <!-- PROJECT CARD 3 -->
+          <div class="col-md-4">
+            <div class="project-card">
+              <img src="project3.png" alt="Tkinter App" />
+
+              <h4>Tkinter App Collection</h4>
+              <p>
+                Python desktop apps including calculator, form & management
+                tools.
+              </p>
+
+              <div class="tags">
+                <span>Python</span>
+                <span>Tkinter</span>
+              </div>
+
+              <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    /*
+    <!-------------------------------------Section Divider------------------------------------------------->
+    */
+    <hr class="section-divider" />
+    <!-------------------------------------Portfolio---------------------------------------------->
+    <section class="skills-section" id="skills">
+      <h2 class="section-title" data-aos="fade-up">
+        Skills & Learning Journey
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Aspiring Full Stack Developer
+      </p>
+      <p class="section-desc" data-aos="fade-up" data-aos-delay="200">
+        Learning, building, and improving through real projects
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card" data-aos="zoom-in">
+          <h3><i class="bi bi-window"></i> Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+          <h3><i class="bi bi-server"></i> Backend Development</h3>
+          <p>Python, Flask, Django (Learning)</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+          <h3><i class="bi bi-database"></i> Database & Testing</h3>
+          <p>MySQL, Manual Testing, API Testing</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+          <h3><i class="bi bi-tools"></i> Tools & Platforms</h3>
+          <p>Git, GitHub, VS Code, Postman</p>
+        </div>
+
+        <div class="skill-card" data-aos="zoom-in" data-aos-delay="400">
+          <h3><i class="bi bi-diagram-3"></i> Computer Science Fundamentals</h3>
+          <p>DSA, OOPS, DBMS, OS, Networks</p>
+        </div>
+      </div>
+
+      <div class="skills-buttons" data-aos="fade-up" data-aos-delay="500">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a
+          href="assets/resume/Parvesh_Kumar_Resume.pdf"
+          download
+          class="btn-secondary"
+        >
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
+
+    <!-------------------------------------Services----------------------------------------------->
+    <section class="services-section" id="services">
+      <div class="container">
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">What I Can Do For You</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- CARD -->
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img src="web-design.png" class="service-img" alt="Web Design" />
+
+              <!-- CONTENT -->
+              <h2>
+                Web <br />
+                Design
+              </h2>
+              <p class="subtitle">
+                Modern, responsive, and user-friendly website designs that look
+                premium.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>UI/UX Design (Modern Layouts)</li>
+                <li>Responsive Design (Mobile Friendly)</li>
+                <li>Landing Page Design</li>
+                <li>Dark / Light Theme Design</li>
+                <li>Figma to HTML Conversion</li>
+                <li>Website Redesign & UI Fixing</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>3–5 days</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Design Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="web-development.png"
+                class="service-img"
+                alt="Web Development"
+              />
+
+              <!-- CONTENT -->
+              <h2>
+                Web <br />
+                Development
+              </h2>
+              <p class="subtitle">
+                Fast, secure, and scalable websites built with modern
+                technologies.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Static & Dynamic Websites</li>
+                <li>Frontend Development (HTML, CSS, JS)</li>
+                <li>Bootstrap / Tailwind UI</li>
+                <li>Backend Integration</li>
+                <li>Database Integration</li>
+                <li>Deployment & Hosting Setup</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>5–10 days</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Web Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="android-service.png"
+                class="service-img"
+                alt="Android App Development"
+              />
+
+              <!-- CONTENT -->
+              <h2>Android App Development</h2>
+              <p class="subtitle">
+                Custom and feature-rich Android applications for businesses and
+                individuals.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Native Android (Java/Kotlin/Fluter)</li>
+                <li>Firebase Integration</li>
+                <li>Payment Gateway</li>
+                <li>Push Notifications</li>
+                <li>Material Design UI</li>
+                <li>Google Play Console Setup</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>2–3 weeks</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Mobile App</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="software-testing.jpeg"
+                class="service-img"
+                alt="Software Testing"
+              />
+
+              <!-- CONTENT -->
+              <h2>
+                Software <br />
+                Testing
+              </h2>
+              <p class="subtitle">
+                Ensuring quality, performance, and reliability of your software
+                and applications.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Manual Testing</li>
+                <li>Functional Testing</li>
+                <li>UI/UX Testing</li>
+                <li>Regression Testing</li>
+                <li>Bug Reporting & Documentation</li>
+                <li>Usability & Performance Testing</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>3–7 days</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Testing Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="project1.png"
+                class="service-img"
+                alt="Portfolio & Resume Development"
+              />
+
+              <!-- CONTENT -->
+              <h2>Portfolio & Resume Development</h2>
+              <p class="subtitle">
+                Professional portfolio websites and resumes that help you stand
+                out and get hired.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Personal Portfolio Website</li>
+                <li>Resume Website / PDF Resume</li>
+                <li>Project Showcase Section</li>
+                <li>GitHub & LinkedIn Integration</li>
+                <li>Responsive & Modern Design</li>
+                <li>Hosting & Deployment Setup</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>3–5 days</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Career Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="web-application.png"
+                class="service-img"
+                alt="Web Application Development"
+              />
+
+              <!-- CONTENT -->
+              <h2>Full Stack Web Application</h2>
+              <p class="subtitle">
+                Custom web applications built for performance, security, and
+                scalability.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Admin Dashboard Development</li>
+                <li>User Authentication System</li>
+                <li>Role-Based Access Control</li>
+                <li>API Integration</li>
+                <li>Database Design & Integration</li>
+                <li>Performance & Security Optimization</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>1–3 weeks</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Web Application</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="student-project.png"
+                class="service-img"
+                alt="Student Project Development"
+              />
+
+              <!-- CONTENT -->
+              <h2>Student Project Development</h2>
+              <p class="subtitle">
+                Complete academic project development with guidance,
+                documentation, and support.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Mini & Major Project Development</li>
+                <li>Web / App / Desktop Projects</li>
+                <li>Source Code with Explanation</li>
+                <li>Project Report & Documentation</li>
+                <li>Viva Preparation Support</li>
+                <li>Project Customization & Updates</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>1–2 weeks</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Student Project</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="api-development.png"
+                class="service-img"
+                alt="API Development & Integration"
+              />
+
+              <!-- CONTENT -->
+              <h2>API Development & Integration</h2>
+              <p class="subtitle">
+                Secure, scalable, and fast APIs for connecting applications and
+                services.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>REST API Development</li>
+                <li>Third-Party API Integration</li>
+                <li>Authentication & Authorization</li>
+                <li>Payment Gateway Integration</li>
+                <li>API Testing & Documentation</li>
+                <li>Performance Optimization</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>1–2 weeks</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>API Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-card">
+              <!-- TOP IMAGE -->
+              <img
+                src="website-fixing.png"
+                class="service-img"
+                alt="Website Fixing & Optimization"
+              />
+
+              <!-- CONTENT -->
+              <h2>Website Fixing & Optimization</h2>
+              <p class="subtitle">
+                Fixing bugs, improving performance, and optimizing websites for
+                speed and stability.
+              </p>
+
+              <h5 class="include-title">What's Included:</h5>
+
+              <ul class="include-list">
+                <li>Bug Fixing & Error Resolution</li>
+                <li>Mobile Responsiveness Fix</li>
+                <li>Speed Optimization (Core Web Vitals)</li>
+                <li>UI & Layout Fixing</li>
+                <li>Code Cleanup & Refactoring</li>
+                <li>SEO & Performance Optimization</li>
+              </ul>
+
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <div>
+                  <span>Delivery</span>
+                  <strong>3–7 days</strong>
+                </div>
+                <div>
+                  <span>Type</span>
+                  <strong>Website Service</strong>
+                </div>
+              </div>
+
+              <!-- BUTTON -->
+              <a href="#" class="details-btn">→ View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    /*
+    <!-------------------------------------Section Divider------------------------------------------------->
+    */
+    <hr class="section-divider" />
+    <!-------------------------------------Contact------------------------------------------------>
+    <section class="contact-section py-5 text-light" id="contact">
+      <div class="container">
+        <h2 class="text-center mb-5 contact-title">My Contact</h2>
+
+        <div class="row align-items-center">
+          <!-- LEFT SIDE : CONTACT FORM -->
+          <div class="col-md-6 mb-4">
+            <div class="contact-card p-4 rounded-4">
+              <h4 class="mb-4">Send Message</h4>
+
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control cosmic-input"
+                    placeholder="Your Name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control cosmic-input"
+                    placeholder="Your Email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <textarea
+                    rows="5"
+                    class="form-control cosmic-input"
+                    placeholder="Your Message"
+                  ></textarea>
+                </div>
+
+                <button class="btn cosmic-btn w-100">Send Message 🚀</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE : CONTACT INFO -->
+          <div class="col-md-6 mb-4">
+            <div class="contact-info p-4 rounded-4">
+              <h3 class="mb-4"><b>Let’s Create</b></h3>
+              <p>
+                I’m always open to new opportunities, collaborations, and
+                creative discussions.I build digital worlds and experiences that
+                no one can forget.
+              </p>
+              <br />
+              <p>Let’s connect and turn your vision into reality 🚀</p>
+
+              <p>📞 <button></button><span>+91 77078 40386</span></p>
+              <p>✉️ <span>dhiman.kumar1903@gmail.com</span></p>
+              <p>📍 <span>India</span></p>
+
+              <div class="mt-4">
+                <button class="badge bg-primary me-2">WhatsApp</button>
+                <button class="badge bg-primary me-2">Email</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    /*
+    <!-------------------------------------Footer------------------------------------------------->
+    <footer class="cosmic-footer text-center text-light py-4">
+      <div class="container">
+        <p class="mb-1 footer-text">
+          © 2045 All Rights Reserved By <span class="highlight">Parvesh</span>
+        </p>
+        <p class="mb-0 footer-sub">Designed with ❤️❤️</p>
+      </div>
+    </footer>
+
+    <!-------------------------------------Navbar------------------------------------------------->
+    <!-------------------------------------Navbar------------------------------------------------->
+    <!-------------------------------------Navbar------------------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

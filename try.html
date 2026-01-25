@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Skills & Learning Journey</title>
+    <link rel="stylesheet" href="css/skills.css" />
+  </head>
+  <body>
+    <script>
+      const cards = document.querySelectorAll(".skill-card");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      cards.forEach((card) => observer.observe(card));
+    </script>
+    <style>
+      body {
+        margin: 0;
+        background: #0b0e17;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+
+      .skills-section {
+        padding: 80px 10%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        text-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+      }
+
+      .section-subtitle {
+        color: #8b9cff;
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
+      .section-desc {
+        color: #aaa;
+        margin-bottom: 50px;
+      }
+
+      /* Grid */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+      }
+
+      /* Cards */
+      .skill-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 30px 20px;
+        transition: 0.3s;
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      .skill-card.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .skill-card:hover {
+        transform: translateY(-6px);
+        border-color: #00e5ff;
+      }
+
+      .icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        color: #00e5ff;
+      }
+
+      p {
+        color: #ccc;
+        font-size: 0.95rem;
+      }
+
+      /* Buttons */
+      .skills-buttons {
+        margin-top: 60px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 14px 32px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .btn-primary {
+        background: linear-gradient(90deg, #00e5ff, #8b5cf6);
+        color: #000;
+        box-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+      }
+
+      .btn-secondary {
+        border: 1px solid #8b5cf6;
+        color: #fff;
+      }
+
+      .btn-secondary:hover {
+        background: #8b5cf6;
+      }
+    </style>
+    <section class="skills-section">
+      <h2 class="section-title">Skills & Learning Journey</h2>
+      <p class="section-subtitle">Aspiring Full Stack Developer</p>
+      <p class="section-desc">
+        Learning, building, and improving through real projects
+      </p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="icon">🌐</div>
+          <h3>Frontend Development</h3>
+          <p>HTML, CSS, JavaScript, Bootstrap</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon">🖥️</div>
+          <h3>Backend Development</h3>
+          <p>Python, Flask, Django (Learning)</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon">🗄️</div>
+          <h3>Database & Testing</h3>
+          <p>MySQL, Manual Testing, API Testing</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon">🛠️</div>
+          <h3>Tools & Platforms</h3>
+          <p>Git, GitHub, VS Code, Postman</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="icon">🧠</div>
+          <h3>Computer Science Fundamentals</h3>
+          <p>DSA, OOPS, DBMS, OS, Networks</p>
+        </div>
+      </div>
+
+      <div class="skills-buttons">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a
+          href="assets/resume/Parvesh_Kumar_Resume.pdf"
+          download
+          class="btn-secondary"
+        >
+          Download Resume
+        </a>
+      </div>
+    </section>
+
+    <script src="js/skills.js"></script>
+  </body>
+</html>
