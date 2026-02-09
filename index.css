@@ -707,6 +707,25 @@ textarea::placeholder {
   font-weight: 600;
 }
 
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}
+.email-btn {
+  background: #0d6efd; /* blue */
+}
 /* <!-------------------------------------Section Divider-------------------------------------------------> */
 .section-divider {
   width: 100%;
