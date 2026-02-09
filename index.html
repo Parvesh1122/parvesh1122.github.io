@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Parvesh Kumar | Full Stack Developer Portfolio</title>
+    <title>Parvesh Kumar | Full Stack Web Developer Portfolio</title>
+
     <meta
       name="keywords"
       content="web developer, portfolio, frontend, backend"
     />
-    !-- AOS Animation CSS -->
+
+    <meta
+      name="description"
+      content="Parvesh Kumar Portfolio - Freelance Web Developer"
+    />
+
+    <link rel="icon" href="logo.png" />
+    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Bootstrap Icons -->
@@ -26,7 +36,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-    <script src="Index.js"></script>
   </head>
   <!-------------------------------------Main------------------------------------------------->
   <body
@@ -35,22 +44,12 @@
     data-bs-offset="80"
     tabindex="0"
   >
-    <script>
-      const navLinks = document.querySelectorAll(".nav-link");
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinks.forEach((l) => l.classList.remove("active"));
-          link.classList.add("active");
-        });
-      });
-    </script>
     <!-------------------------------------Navbar----------------------------------------------->
     <nav class="navbar navbar-expand-lg pk-navbar fixed-top">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
-          <img src="logo.png" alt="PK Logo" class="pk-logo-img" />
+        <a class="navbar-brand" href="#home">
+          <img src="logo.png" alt="Parvesh Kumar Logo" class="pk-logo-img" />
         </a>
         <!-- Mobile toggle -->
         <button
@@ -75,7 +74,7 @@
               <a class="nav-link" href="#project">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
 
             <li class="nav-item">
@@ -105,11 +104,18 @@
             </h1>
             <p>I create elite, high-performance web applications.</p>
             <div class="hero-buttons">
-              <a class="btn btn-primary hero-btn">View Projects</a>
+              <a
+                href="https://github.com/Parvesh1122"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary hero-btn"
+              >
+                <i class="bi bi-github"></i> Projects
+              </a>
               <a
                 href="assets/resume/Parvesh_Kumar_Resume.pdf"
                 download
-                class="btn-secondary"
+                class="btn btn-secondary"
               >
                 Resume
               </a>
@@ -119,7 +125,6 @@
         </div>
       </div>
     </section>
-
     /*
     <!-------------------------------------Section Divider------------------------------------------------->
     */
@@ -137,7 +142,7 @@
         <!-- CONTENT ROW -->
         <div class="row align-items-center">
           <!-- IMAGE COLUMN (4) -->
-          <div class="col-md-4 text-center mb-4 mb-md-0">
+          <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
             <div class="about-img-wrapper">
               <img src="Image.png" alt="Parvesh Kumar" />
             </div>
@@ -188,9 +193,9 @@
         <!-- PROJECTS GRID -->
         <div class="row g-4">
           <!-- PROJECT CARD 1 -->
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="project-card">
-              <img src="project1.png" alt="Portfolio Project" />
+              <img src="project1.png" alt="Portfolio Project Website Project" />
 
               <h4>Portfolio Website</h4>
               <p>
@@ -204,8 +209,9 @@
               </div>
 
               <a
-                href="#https://github.com/Parvesh1122"
+                href="https://github.com/Parvesh1122"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn btn-primary"
                 >View Project</a
               >
@@ -213,7 +219,7 @@
           </div>
 
           <!-- PROJECT CARD 2 -->
-          <div class="col-md-4">
+          <div class="12 col-md-4">
             <div class="project-card">
               <img src="project2.png" alt="E-commerce Project" />
 
@@ -226,12 +232,18 @@
                 <span>JS</span>
               </div>
 
-              <a href="#" class="btn btn-primary">View Project</a>
+              <a
+                href="https://github.com/Parvesh1122"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+                >View Project</a
+              >
             </div>
           </div>
 
           <!-- PROJECT CARD 3 -->
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="project-card">
               <img src="project3.png" alt="Tkinter App" />
 
@@ -246,7 +258,13 @@
                 <span>Tkinter</span>
               </div>
 
-              <a href="#" class="btn btn-primary">View Project</a>
+              <a
+                href="https://github.com/Parvesh1122"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="btn btn-primary"
+                >View Project</a
+              >
             </div>
           </div>
         </div>
@@ -256,7 +274,7 @@
     <!-------------------------------------Section Divider------------------------------------------------->
     */
     <hr class="section-divider" />
-    <!-------------------------------------Portfolio---------------------------------------------->
+    <!-------------------------------------skills---------------------------------------------->
     <section class="skills-section" id="skills">
       <h2 class="section-title" data-aos="fade-up">
         Skills & Learning Journey
@@ -296,11 +314,11 @@
       </div>
 
       <div class="skills-buttons" data-aos="fade-up" data-aos-delay="500">
-        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#project" class="btn-primary">View Projects</a>
         <a
           href="assets/resume/Parvesh_Kumar_Resume.pdf"
           download
-          class="btn-secondary"
+          class="btn btn-secondary"
         >
           Resume
         </a>
@@ -327,97 +345,8 @@
 
         <div class="row g-4">
           <!-- CARD -->
-          <div class="col-md-4">
-            <div class="service-card">
-              <!-- TOP IMAGE -->
-              <img src="web-design.png" class="service-img" alt="Web Design" />
 
-              <!-- CONTENT -->
-              <h2>
-                Web <br />
-                Design
-              </h2>
-              <p class="subtitle">
-                Modern, responsive, and user-friendly website designs that look
-                premium.
-              </p>
-
-              <h5 class="include-title">What's Included:</h5>
-
-              <ul class="include-list">
-                <li>UI/UX Design (Modern Layouts)</li>
-                <li>Responsive Design (Mobile Friendly)</li>
-                <li>Landing Page Design</li>
-                <li>Dark / Light Theme Design</li>
-                <li>Figma to HTML Conversion</li>
-                <li>Website Redesign & UI Fixing</li>
-              </ul>
-
-              <!-- INFO BOX -->
-              <div class="info-box">
-                <div>
-                  <span>Delivery</span>
-                  <strong>3–5 days</strong>
-                </div>
-                <div>
-                  <span>Type</span>
-                  <strong>Design Service</strong>
-                </div>
-              </div>
-
-              <!-- BUTTON -->
-              <a href="#" class="details-btn">→ View Details</a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="service-card">
-              <!-- TOP IMAGE -->
-              <img
-                src="web-development.png"
-                class="service-img"
-                alt="Web Development"
-              />
-
-              <!-- CONTENT -->
-              <h2>
-                Web <br />
-                Development
-              </h2>
-              <p class="subtitle">
-                Fast, secure, and scalable websites built with modern
-                technologies.
-              </p>
-
-              <h5 class="include-title">What's Included:</h5>
-
-              <ul class="include-list">
-                <li>Static & Dynamic Websites</li>
-                <li>Frontend Development (HTML, CSS, JS)</li>
-                <li>Bootstrap / Tailwind UI</li>
-                <li>Backend Integration</li>
-                <li>Database Integration</li>
-                <li>Deployment & Hosting Setup</li>
-              </ul>
-
-              <!-- INFO BOX -->
-              <div class="info-box">
-                <div>
-                  <span>Delivery</span>
-                  <strong>5–10 days</strong>
-                </div>
-                <div>
-                  <span>Type</span>
-                  <strong>Web Service</strong>
-                </div>
-              </div>
-
-              <!-- BUTTON -->
-              <a href="#" class="details-btn">→ View Details</a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -461,7 +390,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -508,7 +437,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -552,7 +481,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -596,51 +525,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="service-card">
-              <!-- TOP IMAGE -->
-              <img
-                src="student-project.png"
-                class="service-img"
-                alt="Student Project Development"
-              />
-
-              <!-- CONTENT -->
-              <h2>Student Project Development</h2>
-              <p class="subtitle">
-                Complete academic project development with guidance,
-                documentation, and support.
-              </p>
-
-              <h5 class="include-title">What's Included:</h5>
-
-              <ul class="include-list">
-                <li>Mini & Major Project Development</li>
-                <li>Web / App / Desktop Projects</li>
-                <li>Source Code with Explanation</li>
-                <li>Project Report & Documentation</li>
-                <li>Viva Preparation Support</li>
-                <li>Project Customization & Updates</li>
-              </ul>
-
-              <!-- INFO BOX -->
-              <div class="info-box">
-                <div>
-                  <span>Delivery</span>
-                  <strong>1–2 weeks</strong>
-                </div>
-                <div>
-                  <span>Type</span>
-                  <strong>Student Project</strong>
-                </div>
-              </div>
-
-              <!-- BUTTON -->
-              <a href="#" class="details-btn">→ View Details</a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -684,7 +569,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-12 col-md-4">
             <div class="service-card">
               <!-- TOP IMAGE -->
               <img
@@ -749,6 +634,7 @@
                 <div class="mb-3">
                   <input
                     type="text"
+                    name="name"
                     class="form-control cosmic-input"
                     placeholder="Your Name"
                   />
@@ -757,6 +643,7 @@
                 <div class="mb-3">
                   <input
                     type="email"
+                    name="email"
                     class="form-control cosmic-input"
                     placeholder="Your Email"
                   />
@@ -766,11 +653,14 @@
                   <textarea
                     rows="5"
                     class="form-control cosmic-input"
+                    name="message"
                     placeholder="Your Message"
                   ></textarea>
                 </div>
 
-                <button class="btn cosmic-btn w-100">Send Message 🚀</button>
+                <button type="submit" class="btn cosmic-btn w-100">
+                  Send Message 🚀
+                </button>
               </form>
             </div>
           </div>
@@ -795,6 +685,7 @@
                 <a
                   href="https://wa.me/917707840386?text=Hi%20Parvesh%2C%20I%20want%20to%20discuss%20a%20project"
                   target="_blank"
+                  rel="noopener noreferrer"
                   class="social-icon whatsapp-btn ms-2"
                 >
                   <i class="bi bi-whatsapp"></i>
@@ -811,12 +702,11 @@
         </div>
       </div>
     </section>
-    /*
     <!-------------------------------------Footer------------------------------------------------->
     <footer class="cosmic-footer text-center text-light py-4">
       <div class="container">
         <p class="mb-1 footer-text">
-          © 2045 All Rights Reserved By <span class="highlight">Parvesh</span>
+          © 2025 All Rights Reserved By <span class="highlight">Parvesh</span>
         </p>
         <p class="mb-0 footer-sub">Designed with ❤️❤️</p>
       </div>

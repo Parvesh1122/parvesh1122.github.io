@@ -3,6 +3,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* <!-------------------------------------Navbar-----------------------------------------------> */
 .pk-navbar {
   background: #0a0a0a;
