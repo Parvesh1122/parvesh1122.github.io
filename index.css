@@ -7,6 +7,29 @@ html {
   scroll-behavior: smooth;
 }
 
+/* <!-------------------------------------Voice-----------------------------------------------> */
+.voice-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(90deg, #00e5ff, #8b5cf6);
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.voice-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 1);
+}
+
 /* <!-------------------------------------Navbar-----------------------------------------------> */
 .pk-navbar {
   background: #0a0a0a;
