@@ -89,8 +89,3 @@ function startTour() {
     },
   );
 }
-
-// ===== OPTIONAL STOP TOUR FUNCTION =====
-function stopTour() {
-  window.speechSynthesis.cancel();
-}

@@ -29,7 +29,83 @@ html {
   transform: scale(1.1);
   box-shadow: 0 0 30px rgba(0, 229, 255, 1);
 }
+/*-------------------- Right Side Social Bar ---------------------*/
+/* Sidebar container */
+.social-hover-bar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
 
+/* Each item */
+.social-item {
+  display: flex;
+  align-items: center;
+  background: #00e5ff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 0 25px 25px 0;
+  width: 55px;
+  height: 55px;
+  overflow: hidden;
+  transition: 0.4s;
+  box-shadow: 0 0 10px #00e5ff;
+}
+
+/* Icon */
+.social-item i {
+  min-width: 55px;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Text hidden initially */
+.social-item span {
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+/* Hover expand */
+.social-item:hover {
+  width: 170px;
+}
+
+.social-item:hover span {
+  opacity: 1;
+}
+
+/* Optional colors */
+.linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+.github {
+  background: #111;
+  color: #fff;
+}
+.youtube {
+  background: #ff0000;
+  color: #fff;
+}
+.twitter {
+  background: #000;
+  color: #fff;
+}
+.instagram {
+  background: #e1306c;
+  color: #fff;
+}
+.facebook {
+  background: #1877f2;
+  color: #fff;
+}
 /* <!-------------------------------------Navbar-----------------------------------------------> */
 .pk-navbar {
   background: #0a0a0a;
