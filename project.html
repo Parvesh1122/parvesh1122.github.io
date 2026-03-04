@@ -128,6 +128,9 @@
         background: #00e5ff;
         color: #000;
       }
+      .hide-project {
+        display: none !important;
+      }
 
       .project-card {
         background: #111;
@@ -775,13 +778,13 @@
           buttons.forEach((b) => b.classList.remove("active"));
           btn.classList.add("active");
 
-          const filter = btn.getAttribute("data-filter");
+          const filter = btn.dataset.filter;
 
           projects.forEach((project) => {
             if (filter === "all" || project.dataset.category === filter) {
-              project.style.display = "block";
+              project.classList.remove("hide-project");
             } else {
-              project.style.display = "none";
+              project.classList.add("hide-project");
             }
           });
         });
